@@ -3,3 +3,7 @@ responsive at
 600,
 500 -card 3 to 2 / logo display block and icon on right side  , 
 450
+functionality : 
+call
+heart
+history
