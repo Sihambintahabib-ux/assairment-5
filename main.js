@@ -1,6 +1,3 @@
-// heart
-// const showHeart = document.getElementById("show-heart");
-// const heartActionBtn = document.getElementById("heart-action-btn");
 
 // coin
 const showCoin = document.getElementById("show-coin");
@@ -51,15 +48,12 @@ const historyDate = document.getElementById("history-date");
 //1st task : Heart Icons =========
 // ===========
 
-// selector for navbar heart count
- showHeart = document.getElementById("show-heart");
+ var showHeart = document.getElementById("show-heart");
 
-// get all heart buttons
- heartButtons = document.querySelectorAll("#heart-action-btn");
+ var heartButtons = document.querySelectorAll("#heart-action-btn");
 
 let heartCount = 0;
 
-// loop over all buttons
 heartButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         heartCount++;
@@ -80,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const showCoin = document.getElementById("show-coin");
     const callHistory = document.getElementById("new-div-history");
 
-    let coins = parseInt(showCoin.textContent, 10); // starting coin balance
+    let coins = parseInt(showCoin.textContent, 10); 
 
     for (let i = 0; i < callBtns.length; i++) {
         callBtns[i].addEventListener("click", function () {
@@ -121,15 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
 //3rd task : Clear History button =========
 // ===========
 
-//delete history 
 const clearHistoryBtn = document.getElementById("clear-action-btn");
 const callHistory = document.getElementById("new-div-history");
 
 clearHistoryBtn.addEventListener("click", function () {
-    callHistory.innerHTML = "";  // remove all entries
+    callHistory.innerHTML = "";  
 });
 
 // ==========
 //4th task : copy =========
 // ===========
-// selector for navbar heart count
