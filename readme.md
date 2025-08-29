@@ -5,10 +5,13 @@ responsive at
 450
 
 functionality and id : 
+
 heart - show-heart / heart-action-btn
 coin - show-coin / 
 copy- show-btn-copy / copy-action-btn
 call - call-action-btn
-history -
-date - 
-clean -
+clean - clear-action-btn
+history - new-div-history
+info- call-info-heading /history-heading
+number -  call-num / history-num
+date - history-date
