@@ -133,19 +133,3 @@ clearHistoryBtn.addEventListener("click", function () {
 //4th task : copy =========
 // ===========
 // selector for navbar heart count
-showBtnCopy = document.getElementById("show-btn-copy");
-
-
-// get all heart buttons
-copyActionBtn = document.querySelectorAll("#copy-action-btn");
-
-let copyActionCount = 0;
-
-// loop over all buttons
-copyActionBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        copyActionCount++;
-        showBtnCopy.textContent = copyActionCount +
-         "copy";
-    });
-});
