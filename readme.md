@@ -14,4 +14,9 @@ clean - clear-action-btn
 history - new-div-history
 info- call-info-heading /history-heading
 number -  call-num / history-num
+tag/badge - call-badge / history-badge
 date - history-date
+
+nav icon-
+coin -100 else 0 heart and copy
+heart increase by hearticon
