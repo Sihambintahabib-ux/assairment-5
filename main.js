@@ -48,7 +48,7 @@ const historyDate = document.getElementById("history-date");
 
 
 // ==========
-//1st task =========
+//1st task : Heart Icons =========
 // ===========
 
 // selector for navbar heart count
@@ -71,42 +71,9 @@ heartButtons.forEach(btn => {
 
 
 // ==========
-//2nd task =========
-// ===========
-// Select all call buttons
-// callActionBtn 
-// const callBtns = document.querySelectorAll(".call-action-btn");
-// const callInfos = document.querySelectorAll(".call-info");
+//2nd task : Call Buttons and Call History Section and timing
+//  =========
 
-// showCoin = document.getElementById("show-coin");
-// const callHistory = document.getElementById("new-div-history");
-
-// let coins = parseInt(showCoin.textContent, 10); // initial coin count
-
-// for (let i = 0; i < callBtns.length; i++) {
-//     callBtns[i].addEventListener("click", function () {
-//         const serviceName = callInfos[i].querySelector(".call-info-heading").textContent;
-//         const serviceNum = callInfos[i].querySelector(".call-num").textContent;
-
-//         // check coin balance
-//         if (coins < 20) {
-//             alert("Not enough coins to make a call!");
-//             return; // stop process
-//         }
-
-//         // deduct coins
-//         coins -= 20;
-//         showCoin.textContent = coins;
-
-//         // show alert
-//         alert(`Calling ${serviceName} at ${serviceNum}`);
-
-//         // add to call history
-//         const entry = document.createElement("p");
-//         entry.textContent = `${serviceName} - ${serviceNum}`;
-//         callHistory.appendChild(entry);
-//     });
-// }
 
 document.addEventListener("DOMContentLoaded", () => {
     const callBtns = document.querySelectorAll(".call-action-btn");
@@ -123,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const serviceNum = card.querySelector(".call-num").textContent;
 
             if (coins < 20) {
-                alert("Not enough coins to make a call!");
+                alert("Sorry :( You have Not enough coins to make a call");
                 return;
             }
 
@@ -133,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(`Calling ${serviceName} at ${serviceNum}`);
 
             const entry = document.createElement("div");
-            entry.classList.add("history-entry", "flex", "justify-between", "items-center", "mb-2");
+            entry.classList.add("history-entry", "w-full","flex", "justify-between", "items-center", "mb-2");
             entry.innerHTML = `
         <div class="info">
           <h3 class="mb-1 text-sm font-medium">${serviceName}</h3>
@@ -147,3 +114,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+
+
+// ==========
+//3rd task : Clear History button =========
+// ===========
+
+//delete history 
+const clearHistoryBtn = document.getElementById("clear-action-btn");
+const callHistory = document.getElementById("new-div-history");
+
+clearHistoryBtn.addEventListener("click", function () {
+    callHistory.innerHTML = "";  // remove all entries
+});
+
+// ==========
+//4th task : copy =========
+// ===========
+// selector for navbar heart count
+showBtnCopy = document.getElementById("show-btn-copy");
+
+
+// get all heart buttons
+copyActionBtn = document.querySelectorAll("#copy-action-btn");
+
+let copyActionCount = 0;
+
+// loop over all buttons
+copyActionBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        copyActionCount++;
+        showBtnCopy.textContent = copyActionCount +
+         "copy";
+    });
+});
