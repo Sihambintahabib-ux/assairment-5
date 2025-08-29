@@ -47,6 +47,10 @@ const historyDate = document.getElementById("history-date");
 
 
 
+// ==========
+//1st task =========
+// ===========
+
 // selector for navbar heart count
  showHeart = document.getElementById("show-heart");
 
@@ -62,3 +66,84 @@ heartButtons.forEach(btn => {
         showHeart.textContent = heartCount;
     });
 });
+
+
+
+
+// ==========
+//2nd task =========
+// ===========
+// Select all call buttons
+// callActionBtn 
+// const callBtns = document.querySelectorAll(".call-action-btn");
+// const callInfos = document.querySelectorAll(".call-info");
+
+// showCoin = document.getElementById("show-coin");
+// const callHistory = document.getElementById("new-div-history");
+
+// let coins = parseInt(showCoin.textContent, 10); // initial coin count
+
+// for (let i = 0; i < callBtns.length; i++) {
+//     callBtns[i].addEventListener("click", function () {
+//         const serviceName = callInfos[i].querySelector(".call-info-heading").textContent;
+//         const serviceNum = callInfos[i].querySelector(".call-num").textContent;
+
+//         // check coin balance
+//         if (coins < 20) {
+//             alert("Not enough coins to make a call!");
+//             return; // stop process
+//         }
+
+//         // deduct coins
+//         coins -= 20;
+//         showCoin.textContent = coins;
+
+//         // show alert
+//         alert(`Calling ${serviceName} at ${serviceNum}`);
+
+//         // add to call history
+//         const entry = document.createElement("p");
+//         entry.textContent = `${serviceName} - ${serviceNum}`;
+//         callHistory.appendChild(entry);
+//     });
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const callBtns = document.querySelectorAll(".call-action-btn");
+    const showCoin = document.getElementById("show-coin");
+    const callHistory = document.getElementById("new-div-history");
+
+    let coins = parseInt(showCoin.textContent, 10); // starting coin balance
+
+    for (let i = 0; i < callBtns.length; i++) {
+        callBtns[i].addEventListener("click", function () {
+            const card = callBtns[i].parentNode.parentNode;
+
+            const serviceName = card.querySelector(".call-info-heading").textContent;
+            const serviceNum = card.querySelector(".call-num").textContent;
+
+            if (coins < 20) {
+                alert("Not enough coins to make a call!");
+                return;
+            }
+
+            coins -= 20;
+            showCoin.textContent = coins;
+
+            alert(`Calling ${serviceName} at ${serviceNum}`);
+
+            const entry = document.createElement("div");
+            entry.classList.add("history-entry", "flex", "justify-between", "items-center", "mb-2");
+            entry.innerHTML = `
+        <div class="info">
+          <h3 class="mb-1 text-sm font-medium">${serviceName}</h3>
+          <p>${serviceNum}</p>
+        </div>
+        <div class="date font-light text-sm">${new Date().toLocaleTimeString()}</div>
+      `;
+
+            callHistory.appendChild(entry);
+        });
+    }
+});
+
