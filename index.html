@@ -23,8 +23,14 @@
 </head>
 <!-- delete===> shadow-black ==== -->
 <!-- bg-[#F5FFF6] -->
+<!-- bg-[#ebfced] -->
 
-<body class="bg-[#ebfced]">
+<body class=" bg-green-700">
+    <p id="heart22">I love JavaScript</p>
+
+
+
+
     <!-- header section with navation bar and hero section  -->
     <header>
         <nav
@@ -33,18 +39,18 @@
                 <img class="w-10" src="B12-A5-Emergency-Hotline/assets/logo.png" alt="" srcset="">
                 <p class="font-bold text-[#006747]">Emergency <br>Service</p>
             </div>
-            <div class="points-sow  | | flex justify-between items-center gap-5 |">
-                <div class="flex gap-1 | py-2 px-[20px] | bg-[#d9fae0] | border border-white  rounded-[999px] ">
-                    <span>0</span>
+            <div class="points-show-right-side  | | flex justify-between items-center gap-5 |">
+                <!-- show-heart -->
+                <div class="flex gap-1 | py-1 px-[15px] | bg-[#d9fae0] | border border-white  rounded-[999px] ">
+                    <span id="show-heart">0</span>
                     <img class="w-6" src="B12-A5-Emergency-Hotline/assets/heart.png" alt="">
                 </div>
-                <div class="flex gap-1 | py-2 px-[15px] | bg-[#d9fae0] | border border-white  rounded-[999px]  ">
-                    <span>100</span>
+                <div class="flex gap-1 | py-1 px-[10px] | bg-[#d9fae0] | border border-white  rounded-[999px]  ">
+                    <span id="show-coin">100</span>
                     <img class="w-6 h-auto" src="B12-A5-Emergency-Hotline/assets/coin.png" alt="">
                 </div>
-                <div
-                    class="  | py-1 px-[20px] | text-white bg-green-600 | border border-white rounded-[999px] ">
-                    <button type="button">2 copy</button>
+                <div class="  | py-1 px-[20px] | text-white bg-green-600 | border border-transparent rounded-[999px] ">
+                    <button id="show-btn-copy" type="button">2 copy</button>
                 </div>
             </div>
 
@@ -66,16 +72,51 @@
         </section>
     </header>
     <!-- main content : number list + history  -->
-    <main class="flex |  flex-wrap-reverse sm:flex-nowrap :  |justify-between gap-10 | w-[90%] m-auto my-5 ">
-        <!-- call number  -->
+    <main class="flex 
+    |  flex-wrap-reverse sm:flex-nowrap   |justify-between gap-8 | 
+    w-[93%] m-auto my-5 ">
+        <!-- parentCards call number  -->
         <div class="| grid grid-cols-1 grid-rows-3 | md:grid-cols-3 md:grid-rows-3 |
-        |   h-auto px-3 m-auto gap-6  | w-full md:w-[70vw] md:max-w-full *: |
+        |   h-auto  m-auto gap-6  | w-full md:w-[70vw] md:max-w-full *: |
         ">
             <!-- 1st card -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
                     
     
                       |flex flex-1 flex-col justify-start ">
+                <div class="icon | flex justify-between">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+
+                    <div id="heart-action-btn">
+
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <!-- call info  -->
+                <div class="call-info | flex flex-col justify-start  ">
+
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
+                </div>
+                <!-- call-info-btn  -->
+                <div class="btn | mt-3 flex   justify-between  ">
+
+                    <button id="copy-action-btn" class="| w-[48%] 
+                        py-1 px-3 |  | 
+                        border border-gray-400 rounded-[10px]">copy</button>
+                    <button id="call-action-btn" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                        border border-white rounded-[10px] ">
+                        call</button>
+                </div>
+
+            </div>
+            <!-- 2nd -->
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+                                
+                
+                                  |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
                     <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
@@ -87,247 +128,218 @@
 
                     <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
                     <p class="text-xs font-medium text-gray-600">National Emergency</p>
-                    <span class="text-xl mt-3  font-semibold ">999</span>
-                    <span class=" bg-gray-300  px-4 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
                     <button id="copy" class="| w-[48%] 
-                        py-1 px-3 |  | 
-                        border border-gray-400 rounded-[10px]">copy</button>
-                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
-                        border border-white rounded-[10px] ">call</button>
-                </div>
-
-            </div>
-            <!-- 2nd -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
-                                
-                
-                                  |flex flex-1 flex-col justify-start ">
-                <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/police.png" alt="">
-
-                    <div class="heart  ">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div class="call-info | flex flex-col justify-start ">
-
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
-                </div>
-                <div class="btn | mt-3 flex   justify-between  ">
-
-                    <button class="| w-[48%] 
                                     py-1 px-3 |  | 
                                     border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
                                     border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 3rd -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
                             
             
                               |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/fire-service.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
+                    <button id="copy" class="| w-[48%] 
                                 py-1 px-3 |  | 
                                 border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
                                 border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 4th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
                             
             
                               |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/ambulance.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
+                    <button id="copy" class="| w-[48%] 
                                 py-1 px-3 |  | 
                                 border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
                                 border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 5th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
                             
             
                               |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
+                    <button id="copy" class="| w-[48%] 
                                 py-1 px-3 |  | 
                                 border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
                                 border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 6th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
-                            
-            
-                              |flex flex-1 flex-col justify-start ">
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+                                
+                
+                                  |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
-                                py-1 px-3 |  | 
-                                border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
-                                border border-white rounded-[10px] ">call</button>
+                    <button id="copy" class="| w-[48%] 
+                                    py-1 px-3 |  | 
+                                    border border-gray-400 rounded-[10px]">copy</button>
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                                    border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 7th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
-                            
-            
-                              |flex flex-1 flex-col justify-start ">
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+                                
+                
+                                  |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
-                                py-1 px-3 |  | 
-                                border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
-                                border border-white rounded-[10px] ">call</button>
+                    <button id="copy" class="| w-[48%] 
+                                    py-1 px-3 |  | 
+                                    border border-gray-400 rounded-[10px]">copy</button>
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                                    border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 8th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
-                            
-            
-                              |flex flex-1 flex-col justify-start ">
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+                                
+                
+                                  |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
-                                py-1 px-3 |  | 
-                                border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
-                                border border-white rounded-[10px] ">call</button>
+                    <button id="copy" class="| w-[48%] 
+                                    py-1 px-3 |  | 
+                                    border border-gray-400 rounded-[10px]">copy</button>
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                                    border border-white rounded-[10px] ">call</button>
                 </div>
 
             </div>
             <!-- 9th -->
-            <div class="card |  p-3 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
+            <div class="card |  p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-white | 
                             
             
                               |flex flex-1 flex-col justify-start ">
                 <div class="icon | flex justify-between">
-                    <img class="w-7" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
+                    <img class="w-8 p-1  bg-red-300" src="B12-A5-Emergency-Hotline/assets/emergency.png" alt="">
 
-                    <div class="heart  ">
+                    <div id="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
-                <div class="call-info | flex flex-col justify-start ">
+                <div class="call-info | flex flex-col justify-start  ">
 
-                    <h3 class="text-[1rem] font-semibold ">National Emergency Number</h3>
-                    <p class="text-xs font-medium">National Emergency</p>
-                    <span class="text-2xl ">999</span>
-                    <span class=" bg-gray-300  px-3 py-0.5 w-fit | border border-white rounded-[999px]">All</span>
+                    <h3 class="mt-2 text-[1rem] font-bold ">National Emergency Number</h3>
+                    <p class="text-xs font-medium text-gray-600">National Emergency</p>
+                    <span class="text-xl mt-3 mb-1 font-semibold ">999</span>
+                    <span class=" bg-gray-200  px-5 py w-fit | border border-white rounded-[999px]">All</span>
                 </div>
                 <div class="btn | mt-3 flex   justify-between  ">
 
-                    <button class="| w-[48%] 
+                    <button id="copy" class="| w-[48%] 
                                 py-1 px-3 |  | 
                                 border border-gray-400 rounded-[10px]">copy</button>
-                    <button class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
+                    <button id="call" class=" | w-[48%] py-1 px-3 | text-white bg-green-600 | 
                                 border border-white rounded-[10px] ">call</button>
                 </div>
 
@@ -336,23 +348,26 @@
         </div>
         <!-- callhistory  -->
         <div
-            class="call-history | w-full md:w-[25vw]  | p-10  | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]  bg-white |  | ">
+            class="call-history | w-full md:w-[25vw]  | p-5 | rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]  bg-white |  | ">
             <!-- clear section  -->
             <p class="flex justify-between items-center | mb-9  ">
-                <span> <i class="fa-regular fa-heart"></i>  call history</span>
-                <button type="button" class="py-1 px-[20px] | text-white bg-green-600 | border border-transparent rounded-[999px]">clear</button>
+                <span class="font-bold "> <i class="fa-regular fa-clock"></i> Call history</span>
+                <button type="button"
+                    class="py-1 px-[20px] | text-white bg-green-600 | border border-transparent rounded-[999px]">clear</button>
             </p>
+            <!-- NEW RECORD -->
             <div class="call-history-log |  flex justify-between items-center ">
-                <div class="info">
-                    <h2>national emergency number</h2>
+                <div class="info |  ">
+                    <h2 class=" mb-1 | text-sm font-medium">National Emergency Number</h2>
                     <p>999</p>
                 </div>
-                <div class="date ">28/07/2025 am</div>
+                <div class="date | font-light text-sm ">28/07/2025 am</div>
             </div>
         </div>
     </main>
 
 </body>
+
 <script src="main.js"></script>
 
 </html>
