@@ -113,16 +113,14 @@ copyActionBtn.forEach(btn => {
 
         copyCount++;
         showBtnCopy.textContent = copyCount + " copy";
-        alert(`copying :  ${serviceNum} + "btn number is : " ${copyCount} `);
+        // alert(`copying00 :  ${serviceNum} + "btn number is : " ${copyCount} `);
 
+        
         // ====
         // clip-board 
-
-        navigator.clipboard.writeText(serviceNum).then(() => {
-            alert(`Copied number: ${serviceNum}`);
-        }).catch(err => {
-            console.error("Failed to copy: ", err);
-        });
+        navigator.clipboard.writeText(serviceNum)
+       
+            alert(`Copied number: ${serviceNum} and Total copy :  ${copyCount} `);
         // =====
     });
 });
